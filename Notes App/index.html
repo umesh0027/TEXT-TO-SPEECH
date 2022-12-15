@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>doc</title>
+    <link rel="stylesheet" href="style.css">
+   
+</head>
+<body>
+    <div class="container">
+    <main>
+        <p class="title">
+            Text To Speech
+        </p>
+        <div class="text-section">
+            <p class="text-title">Enter Text</p>
+            <textarea name="" id="text" ></textarea>
+        </div>
+        <div class="voice-section">
+            <p class="voice-title">Select Voice</p>
+            <select name="" id="voice">
+                <option value="Google Us English">Google Us English</option>
+            </select>
+        </div>
+        <button class="submit">Convert to Speech</button>
+    </main>
+</div>
+    
+</body>
+<!-- <script>
+    const textarea=document.querySelector('#text')
+let voicelist=document.querySelector('#voice')
+let speechbtn=document.querySelector('.submit')
+
+let synth=speechSynthesis
+let isSpeaking=true
+
+function voicespeech(){
+    for(let voice of synth.getVoices()){
+        let option =document.createElement('option')
+        option.text=voice.name
+        voicelist.add(option)
+        console.log(option)
+    }
+}
+synth.addEventListener('voiceschanged',voicespeech)
+
+function texttospeech(text){
+    let utternance = new SpeechSynthesisUtterance(text)
+    for(let voice of synth.getVoices()){
+        if(voice.name==voicelist.value){
+
+        }
+    }
+    speechSynthesis.speak(utternance)
+}
+
+
+speechbtn.addEventListener('click',(e)=>{
+    e.preventDefault()
+    if(textarea.value!=''){
+        if(!synth.speaking){
+            texttospeech(textarea.value)
+        }
+        if(textarea.value.length>80){
+            if(isSpeaking){
+                stnth.resume()
+                isSpeaking=false
+                speechbtn.innerHTML='Pause Speech'
+
+            }
+            else{
+                synth.pause()
+                isSpeaking=true
+                speechbtn.innerHTML='Resume Speech'
+            }
+            setInterval(()=>{
+                if(!synth.speaking && !isSpeaking){
+                    isSpeaking=true
+                    speechbtn.innerHTML='Convert To Speech'
+                }
+         
+            })
+        }
+    }
+})
+</script> -->
+<script src="javascript.js"></script>
+</html>
